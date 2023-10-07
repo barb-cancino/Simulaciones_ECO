@@ -1,5 +1,6 @@
 import pygame
 from math import *
+from T2P_solucion import *
 
 
 def drawgraph(TA, TB):
@@ -15,6 +16,7 @@ def drawgraph(TA, TB):
     )
     # Dibujamos las curvas de demanda
 
+    # Modificamos las posiciones tal que quede a escala el gráfico
     TA_pos = [[100, 700 - (TA[0] / TA[1])], [100 + TA[0], 700]]
     TB_pos = [[100, 700 - (TB[0] / TB[1])], [100 + TB[0], 700]]
 
@@ -26,10 +28,10 @@ def drawgraph(TA, TB):
         TB_pos[0][1] = 200
     elif max_disp_pagar_A > max_disp_pagar_B:
         TA_pos[0][1] = 200
-        TB_pos[0][1] = (max_disp_pagar_B / max_disp_pagar_A) * 600
+        TB_pos[0][1] = 700 - (max_disp_pagar_B / max_disp_pagar_A) * 600
     else:
         TB_pos[0][1] = 200
-        TA_pos[0][1] = (max_disp_pagar_A / max_disp_pagar_B) * 600
+        TA_pos[0][1] = 700 - (max_disp_pagar_A / max_disp_pagar_B) * 600
 
     max_q_A = TA[0]
     max_q_B = TB[0]
@@ -52,6 +54,30 @@ def drawgraph(TA, TB):
     pygame.draw.line(
         screen, [0, 0, 255], start_pos=TB_pos[0], end_pos=TB_pos[1], width=4
     )
+
+    # Dibujamos los precios de la solución
+
+    # Precio cliente demanda baja
+    PB = Pb(TA, TB, 0.5, 1)
+    PB = 700 - (PB / max(max_disp_pagar_A, max_disp_pagar_B)) * 600
+    pygame.draw.line(
+        screen,
+        [0, 123, 255],
+        start_pos=[100, PB],
+        end_pos=[700, PB],
+        width=2,
+    )
+    # Costo Marginal
+    PA = Pa(1)
+    PA = 700 - (PA / max(max_disp_pagar_A, max_disp_pagar_B)) * 600
+    pygame.draw.line(
+        screen,
+        [0, 0, 0],
+        start_pos=[100, PA],
+        end_pos=[700, PA],
+        width=2,
+    )
+
     pygame.display.flip()
 
 
