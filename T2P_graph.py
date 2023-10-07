@@ -63,17 +63,6 @@ def drawgraph(TA, TB):
     ##########################################################################
     # Dibujamos los precios de la solución
 
-    # Precio cliente demanda baja
-    PB = Pb(TA, TB, alpha(), CMG)
-    PB = 700 - (PB / max(max_disp_pagar_A, max_disp_pagar_B)) * 600
-    pygame.draw.line(
-        screen,
-        [0, 123, 255],
-        start_pos=[100, PB],
-        end_pos=[700, PB],
-        width=2,
-    )
-
     # Costo Marginal
     PA = Pa(CMG)
     PA = 700 - (PA / max(max_disp_pagar_A, max_disp_pagar_B)) * 600
@@ -82,6 +71,17 @@ def drawgraph(TA, TB):
         [0, 0, 0],
         start_pos=[100, PA],
         end_pos=[700, PA],
+        width=2,
+    )
+
+    # Precio cliente demanda baja
+    PB = Pb(TA, TB, alpha(), CMG)
+    PB = 700 - (PB / max(max_disp_pagar_A, max_disp_pagar_B)) * 600
+    pygame.draw.line(
+        screen,
+        [0, 123, 255],
+        start_pos=[100, PB],
+        end_pos=[700, PB],
         width=2,
     )
 
@@ -95,7 +95,7 @@ def drawgraph(TA, TB):
 
     text_CMg = font.render("Pa = CMg", True, [0, 0, 0])
     text_CMg_y = font.render(str(float(Pa(CMG))), True, [0, 0, 0])
-    text_Pb = font.render("Pb", True, [0, 0, 0])
+    text_Pb = font.render("Pb", True, [0, 123, 255])
     text_Pb_y = font.render(str(Pb(TA, TB, alpha(), CMG)), True, [0, 0, 0])
     text_TA_y = font.render(str(max_disp_pagar_A), True, [0, 0, 0])
     text_TB_y = font.render(str(max_disp_pagar_B), True, [0, 0, 0])
