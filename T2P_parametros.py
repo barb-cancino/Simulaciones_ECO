@@ -1,13 +1,13 @@
 def t1():
-    return [240, 1]
+    return [11, 1]
 
 
 def t2():
-    return [180, 1]
+    return [8.5, 0.5]
 
 
 def CMg():
-    return 30
+    return 1
 
 
 def alpha():

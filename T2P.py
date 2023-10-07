@@ -39,11 +39,15 @@ def beneficios():
     )
 
 
-print(f"\n Beneficios: {beneficios()}")
+print("")
+print(f"Excente del consumidor: {EC(TA,Pa(CMG))}")
 print(f"Tarifa cliente de alta demanda: \n CF = {CF_A(TA, TB, PA, PB)} \n CV = {PA}")
 print(f"Cantidad demandada cliente de demanda alta: {q(TA, PA)}")
+print(f"\n Excente del consumidor: {EC(TB,Pb(TA,TB,ALPHA,CMG))}")
 print(f"Tarifa cliente de demanda baja: \n CF = {CF_B(TB,PB)} \n CV = {PB}")
 print(f"Cantidad demandada cliente de demanda baja: {q(TB, PB)}")
+
+print(f"\n Beneficios: {beneficios()}")
 
 drawgraph(TA, TB)
 exitbutton()
