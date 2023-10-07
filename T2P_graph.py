@@ -71,7 +71,7 @@ def drawgraph(TA, TB):
         [0, 0, 0],
         start_pos=[100, PA],
         end_pos=[700, PA],
-        width=2,
+        width=4,
     )
 
     # Precio cliente demanda baja
