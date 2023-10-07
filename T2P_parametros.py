@@ -1,14 +1,18 @@
 def t1():
-    return [11, 1]
+    return [240, 1]
 
 
 def t2():
-    return [8.5, 0.5]
+    return [180, 1]
 
 
 def CMg():
-    return 1
+    return 30
 
 
 def alpha():
     return 0.5
+
+
+def n():
+    return 200

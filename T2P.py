@@ -22,7 +22,7 @@ else:
     TA = T2
     TB = T1
 
-N = 200
+N = n()
 ALPHA = alpha()
 Prop = Proporcion(ALPHA)
 CMG = CMg()
