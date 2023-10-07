@@ -3,7 +3,7 @@ def t1():
 
 
 def t2():
-    return [10.5, 0.5]
+    return [8.5, 0.5]
 
 
 def CMg():

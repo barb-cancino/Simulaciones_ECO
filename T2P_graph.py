@@ -8,7 +8,6 @@ def drawgraph(TA, TB):
     pygame.init()
     screen = pygame.display.set_mode([800, 800])
     screen.fill([255, 255, 255])
-    # Texto
 
     pygame.display.set_caption("Tarifa en dos partes")
     # Dibujamos los ejes del gráfico
@@ -18,6 +17,13 @@ def drawgraph(TA, TB):
     pygame.draw.line(
         screen, [0, 0, 0], start_pos=[100, 700], end_pos=[700, 700], width=4
     )
+
+    pygame.draw.polygon(
+        screen, [0, 0, 0], [[100, 80], [90, 100], [110, 100]], width=0
+    )  # flecha eje y
+    pygame.draw.polygon(
+        screen, [0, 0, 0], [[720, 700], [700, 690], [700, 710]], width=0
+    )  # felcha eje x
     ##########################################################################
     # Dibujamos las curvas de demanda
 
