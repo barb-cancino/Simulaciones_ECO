@@ -1,3 +1,5 @@
+from graphic_calculator import *
+
 T1 = [11, 1]
 T2 = [11, 0.5]
 
@@ -61,3 +63,6 @@ print(f"Tarifa cliente de alta demanda: \n CF = {CF_A()} \n CV = {Pa}")
 print(f"Cantidad demandada cliente de demanda alta: {qa(Pa)}")
 print(f"Tarifa cliente de demanda baja: \n CF = {CF_B()} \n CV = {Pb}")
 print(f"Cantidad demandada cliente de demanda baja: {qb(Pb)}")
+
+drawgraph(TA, TB)
+exitbutton()
