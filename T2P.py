@@ -1,5 +1,5 @@
 from T2P_solucion import *
-from graphic_calculator import *
+from T2P_graph import *
 from T2P_parametros import *
 
 T1 = t1()
