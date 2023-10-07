@@ -120,8 +120,8 @@ def drawgraph(TA, TB):
     textRect_TA_x = text_TA_x.get_rect()
     textRect_TB_x = text_TA_x.get_rect()
 
-    textRect_P.center = (720, 720)
-    textRect_Q.center = (80, 100)
+    textRect_P.center = (720, 730)
+    textRect_Q.center = (70, 100)
 
     textRect_Cmg.center = (740, PA)
     textRect_Cmg_y.center = (80, PA)
