@@ -1,8 +1,9 @@
 from T2P_solucion import *
 from graphic_calculator import *
+from T2P_parametros import *
 
-T1 = [11, 1]
-T2 = [8.5, 0.5]
+T1 = t1()
+T2 = t2()
 
 print("Datos del problema:")
 print(f"q1 = {T1[0]} - {T1[1]}*p1")
@@ -22,19 +23,19 @@ else:
     TB = T1
 
 N = 200
-alpha = 0.5
-Prop = Proporcion(alpha)
-CMg = 1
+ALPHA = alpha()
+Prop = Proporcion(ALPHA)
+CMG = CMg()
 
-PA = Pa(CMg)
+PA = Pa(CMG)
 
-PB = Pb(TA, TB, alpha, CMg)
+PB = Pb(TA, TB, ALPHA, CMG)
 
 
 def beneficios():
     return N * (
-        (Prop[0] * (q(TA, PA) * (PA - CMg) + CF_A(TA, TB, PA, PB)))
-        + (Prop[1] * (q(TB, PB) * (PB - CMg) + CF_B(TB, PB)))
+        (Prop[0] * (q(TA, PA) * (PA - CMG) + CF_A(TA, TB, PA, PB)))
+        + (Prop[1] * (q(TB, PB) * (PB - CMG) + CF_B(TB, PB)))
     )
 
 
