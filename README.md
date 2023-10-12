@@ -2,4 +2,8 @@
 
 Código para analizar resultados de problemas económicos
 
-T2P: Tarifa en 2 partes con discriminación en 2° grado
+### T2P
+Características:
+- Tarifa en 2 partes 
+- Discriminación en 2° grado
+- Funciones de demanda y costos lineales
