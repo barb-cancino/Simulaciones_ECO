@@ -1,0 +1,39 @@
+
+.graph-wrapper {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+    justify-content: left;
+    background-color: var(--background-accent);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 50px;
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    vertical-align: top;
+}
+
+.generate-graph-button {
+    color: white;
+    background-color: var(--primary);
+    font-weight: bold;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    transition: opacity 0.15s;
+    cursor:pointer;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.generate-button:hover {
+    opacity: 0.8;
+}
+
+.generate-button:active {
+    opacity: 0.5;
+}
