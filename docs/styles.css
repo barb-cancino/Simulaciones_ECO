@@ -13,12 +13,58 @@ body {
     margin: 0px;
 }
 
-.header {
+.main-header {
     background-color: var(--background-accent);
     margin-top: 0px;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 25px;
+}
+
+.sub-header {
+    display: block;
+    background-color: var(--background-accent);
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 0;
+    font-family: Arial;
+    color: var(--primary);
+
+}
+
+.parameters-wrapping {
+    justify-content: left;
+    background-color: var(--background-accent);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 50px;
+    margin-left: 25px;
+    margin-right: 25px; 
+    margin-bottom: 15px;
+}
+.function-text {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-left: 5px;
+}
+
+.function-input {
+    display: flex;
+    font-family: Arial;
+    font-size: small;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.number-input {
+    width: 3em;
+    border: 1px solid;
+    border-color: var(--secondary-color);
+    border-radius: 10px;
+    margin-left: 5px;
+    text-align: center;
 }
 
 .graph-wrapper {
