@@ -5,9 +5,9 @@
     justify-content: left;
     background-color: var(--background-accent);
     padding: 25px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    margin-top: 15px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-top: 25px;
     margin-bottom: 15px;
 }
 
