@@ -1,7 +1,7 @@
 
 .graph-wrapper {
     grid-row: 3 / 4;
-    grid-column: 2 / 4;
+    grid-column: 2 / 3;
     justify-content: left;
     background-color: var(--background-accent);
     padding-top: 25px;
@@ -9,7 +9,7 @@
     border-radius: 25px;
     margin-top: 15px;
     margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 0;
     margin-bottom: 15px;
     vertical-align: top;
 }
