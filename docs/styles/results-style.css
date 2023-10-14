@@ -16,7 +16,7 @@
 
 .generate-results-button {
     color: white;
-    background-color: var(--primary);
+    background-color: var(--succes);
     font-weight: bold;
     border: none;
     padding-left: 20px;
