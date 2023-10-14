@@ -13,27 +13,3 @@
     margin-bottom: 0;
     vertical-align: top;
 }
-
-.generate-results-button {
-    color: white;
-    background-color: var(--succes);
-    font-weight: bold;
-    border: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 25px;
-    transition: opacity 0.15s;
-    cursor:pointer;
-    margin-left: 25px;
-    margin-right: 25px;
-}
-
-.generate-results-button:hover {
-    opacity: 0.8;
-}
-
-.generate-results-button:active {
-    opacity: 0.5;
-}
