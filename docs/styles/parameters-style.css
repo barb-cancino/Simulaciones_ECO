@@ -15,7 +15,7 @@
     background-color: var(--background-accent);
     margin-top: 0px;
     border-bottom: 1px solid var(--background-color);
-    padding-left: 10px;
+    padding-left: 0;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -24,6 +24,18 @@
     font-size: 10px;
 }
 
+.side-bar-header {
+    display: inline-block;
+    background-color: var(--background-accent);
+    margin-top: 0px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--body-color);
+
+}
 
 .clear-button {
     display: inline-block;
@@ -55,24 +67,25 @@
 .mini-header {
     display: block;
     margin-top: 20px;
-    margin-left: 10px;
     margin-bottom: 20px;
-    font-family: Arial;
+    font-family: Roboto;
+    font-weight: bold;
     color: var(--primary);
+}
+
+
+.function-input {
+    display: flex;
+    font-family: Arial;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .function-text {
     margin-top: 10px;
     margin-left: 10px;
     margin-left: 5px;
-}
-
-.function-input {
-    display: flex;
-    font-family: Arial;
-    font-size: small;
-    margin-top: 10px;
-    font-size: 15px;
 }
 
 .number-input {
