@@ -1,20 +1,17 @@
 
 .parameters-wrapping {
-    grid-column: 1 / 2;
-    grid-row: 1/ 4;
-    justify-content: left;
+    position: fixed;
+    top:0;
+    bottom: 0;
     background-color: var(--background-accent);
     padding-top: 25px;
     padding-right: 25px;
     padding-bottom: 25px;
     padding-left: 50px;
     margin-top: 0;
-    margin-bottom: 15px;
-    border-bottom-right-radius: 25px;
 }
 
 .main-header {
-    grid-column: span 1;
     background-color: var(--background-accent);
     margin-top: 0px;
     border-bottom: 1px solid var(--background-color);
@@ -27,17 +24,6 @@
     font-size: 10px;
 }
 
-.sub-header {
-    display: inline-block;
-    background-color: var(--background-accent);
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 18px;
-    color: var(--body-color);
-}
 
 .clear-button {
     display: inline-block;
