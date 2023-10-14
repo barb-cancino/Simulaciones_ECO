@@ -132,6 +132,33 @@ body {
     text-align: center;
 }
 
+.botton-holder {
+    display: flex;
+    justify-content: end;
+}
+.generate-results-button {
+    display: inline-block;
+    color: white;
+    background-color: var(--primary);
+    font-weight: bold;
+    border: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 25px;
+    transition: opacity 0.15s;
+    cursor:pointer;
+    margin-top: 35px;
+}
+
+.generate-results-button:hover {
+    opacity: 0.8;
+}
+
+.generate-results-button:active {
+    opacity: 0.5;
+}
 
 .results-wrapper {
     grid-row: 2 / 3;
