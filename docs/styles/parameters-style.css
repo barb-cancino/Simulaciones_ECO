@@ -19,7 +19,15 @@
     margin-bottom: 20px;
     font-family: Arial;
     color: var(--primary);
+}
 
+.mini-header {
+    display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-family: Arial;
+    color: var(--body-color);
 }
 
 .function-text {

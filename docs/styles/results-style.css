@@ -29,3 +29,11 @@
     margin-left: 25px;
     margin-right: 25px;
 }
+
+.generate-results-button:hover {
+    opacity: 0.8;
+}
+
+.generate-results-button:active {
+    opacity: 0.5;
+}

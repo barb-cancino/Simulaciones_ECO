@@ -30,10 +30,10 @@
     margin-right: 25px;
 }
 
-.generate-button:hover {
+.generate-graph-button:hover {
     opacity: 0.8;
 }
 
-.generate-button:active {
+.generate-graph-button:active {
     opacity: 0.5;
 }
