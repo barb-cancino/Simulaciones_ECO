@@ -26,13 +26,14 @@ body {
     background-color: var(--background-accent);
     margin-top: 0px;
     margin-left: 10px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     font-family: Arial;
     color: var(--primary);
 
 }
 
 .parameters-wrapping {
+    display: inline-block;
     justify-content: left;
     background-color: var(--background-accent);
     padding-top: 25px;
@@ -41,7 +42,6 @@ body {
     padding-right: 25px;
     border-radius: 50px;
     margin-left: 25px;
-    margin-right: 25px; 
     margin-bottom: 15px;
 }
 .function-text {
@@ -68,7 +68,7 @@ body {
 }
 
 .graph-wrapper {
-    display: flex;
+    display: inline-block;
     justify-content: left;
     background-color: var(--background-accent);
     padding-top: 25px;
@@ -76,6 +76,7 @@ body {
     border-radius: 50px;
     margin-left: 25px;
     margin-right: 25px;
+    vertical-align: top;
 }
 
 .generate-button {
@@ -91,6 +92,7 @@ body {
     transition: opacity 0.15s;
     cursor:pointer;
     margin-left: 25px;
+    margin-right: 25px;
 }
 
 .generate-button:hover {
