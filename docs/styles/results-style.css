@@ -13,3 +13,10 @@
     margin-bottom: 0;
     vertical-align: top;
 }
+
+.results-text {
+    color:var(--secondary-color);
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+}
