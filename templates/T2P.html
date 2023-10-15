@@ -19,58 +19,65 @@
 			</div>
 			<div class = "subsection-heading">
 				<h3 class = "side-bar-header">	Parámetros </h3>
-				<button class = "clear-button"> reset</button>
+				<button class = "clear-button" onclick="location.href = '/'" type="button"> reset</button>
+
+			</div>
+			<div>
+				<form method= "post">
+					<h4 class = "mini-header"> Demanda </h4>
+
+					<div class="function-input">
+						<p class="function-text">	q = </p>
+						<input class= "number-input" id="constant_1" name ="constant_1" inputmode="numeric" maxlength="4">
+						<p class="function-text"> + </p>
+						<input class= "number-input" id = "slope_1" name = "slope_1" inputmode="numeric" maxlength="3"> 
+						<p class="function-text"> x p </p>
+					</div>
+
+					<div class="function-input">
+						<p class="function-text">	q = </p>
+						<input class= "number-input" id = ""constant_2 ="constant_2" inputmode="numeric" maxlength="4">
+						<p class="function-text"> + </p>
+						<input class= "number-input" id="slope_2" name = "slope_2" inputmode="numeric" maxlength="3"> 
+						<p class="function-text"> x p </p>
+					</div>
+
+					<div class="function-input">
+						<p class="function-text">	N° Clientes: </p>
+						<input class= "number-input" id="numero_clientes "name = "numero_clientes" inputmode="numeric" maxlength="4">
+					</div>
+
+					<div class="function-input">
+						<p class="function-text">	Proporción: </p>
+						<input class= "number-input" id="proporcion" name="proporcion" inputmode="numeric" maxlength="4">
+					</div>
+
+					<h4 class = "mini-header"> Costos </h4>
+
+					<div class="function-input">
+						<p class="function-text">	Costo Fijo: </p>
+						<input class= "number-input" id="costo_fijo" name ="costo_fijo" inputmode="numeric" maxlength="4">
+					</div>
+
+					<div class="function-input">
+						<p class="function-text">	Costo Marginal: </p>
+						<input class= "number-input" id ="costo_marginal" name= "costo_marginal" inputmode="numeric" maxlength="4">
+					</div>
+					</br>
+					<div class="botton-holder">
+						<input type="submit" class="generate-results-button" value="Submit">
+						<button class="generate-results-button" onclick="location.href = '/results'" type="button"> Solución</button>
+					</div>
+				</form>
 			</div>
 
-			<h4 class = "mini-header"> Demanda </h4>
-
-			<div class="function-input">
-				<p class="function-text">	q = </p>
-				<input class= "number-input" inputmode="numeric" maxlength="4">
-				<p class="function-text"> + </p>
-				<input class= "number-input" inputmode="numeric" maxlength="3"> 
-				<p class="function-text"> x p </p>
-			</div>
-
-			<div class="function-input">
-				<p class="function-text">	q = </p>
-				<input class= "number-input" inputmode="numeric" maxlength="4">
-				<p class="function-text"> + </p>
-				<input class= "number-input" inputmode="numeric" maxlength="3"> 
-				<p class="function-text"> x p </p>
-			</div>
-
-			<div class="function-input">
-				<p class="function-text">	N° Clientes: </p>
-				<input class= "number-input" inputmode="numeric" maxlength="4">
-			</div>
-
-			<div class="function-input">
-				<p class="function-text">	Proporción: </p>
-				<input class= "number-input" inputmode="numeric" maxlength="4">
-			</div>
-
-			<h4 class = "mini-header"> Costos </h4>
-
-			<div class="function-input">
-				<p class="function-text">	Costo Fijo: </p>
-				<input class= "number-input" inputmode="numeric" maxlength="4">
-			</div>
-
-			<div class="function-input">
-				<p class="function-text">	Costo Marginal: </p>
-				<input class= "number-input" inputmode="numeric" maxlength="4">
-			</div>
-			<div class="botton-holder">
-				<button class="generate-results-button" onclick="location.href = '/results'" type="button"> Solución</button>
-			</div>
 		</div>
 
 		<div class="main-grid">
 			<div class = "results-wrapper">
 				{% block results%}
 				<h3 class = "sub-header"> Resultados</h3>
-				<p class="results-text"> Beneficios: $</p>
+				<p class="results-text"> Beneficios: ${{data['constant_1']}}</p>
 				{% endblock %}
 			</div>
 

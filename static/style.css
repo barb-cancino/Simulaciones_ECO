@@ -140,6 +140,8 @@ body {
     color: white;
     background-color: var(--primary);
     font-weight: bold;
+    font-family: Roboto;
+    font-size: 12px;
     border: none;
     padding-left: 15px;
     padding-right: 15px;
@@ -149,6 +151,7 @@ body {
     transition: opacity 0.15s;
     cursor:pointer;
     margin-top: 35px;
+    margin-left: 15px;
 }
 
 .generate-results-button:hover {

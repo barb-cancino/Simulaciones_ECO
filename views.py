@@ -1,13 +1,15 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 views = Blueprint(__name__, "views")
 
 
-@views.route("/")
+@views.route("/", methods=["get", "post"])
 def t2p():
-    return render_template("T2P.html")
+    parameters = request.form
+    print(parameters)
+    return render_template("T2P.html", data=parameters)
 
 
-@views.route("/results")
+@views.route("/results", methods=["get", "post"])
 def results():
     return render_template("results.html", benefits="3000")
