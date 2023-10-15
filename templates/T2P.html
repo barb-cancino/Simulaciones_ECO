@@ -62,16 +62,16 @@
 				<input class= "number-input" inputmode="numeric" maxlength="4">
 			</div>
 			<div class="botton-holder">
-				<button class="generate-results-button"> Solución<noscript></noscript></button>
+				<button class="generate-results-button" onclick="location.href = '/results'" type="button"> Solución</button>
 			</div>
 		</div>
 
 		<div class="main-grid">
 			<div class = "results-wrapper">
-				<h3 class = "sub-header"> Resultados</h3class> 
-				<p class="results-text">
-					Beneficios: $
-				</p>
+				{% block results%}
+				<h3 class = "sub-header"> Resultados</h3>
+				<p class="results-text"> Beneficios: $</p>
+				{% endblock %}
 			</div>
 
 			<div class = "graph-wrapper">
