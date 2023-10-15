@@ -12,8 +12,3 @@ def t2p():
         print(parameters)
     solution = t2p_model.results(parameters)
     return render_template("T2P.html", data=solution)
-
-
-@views.route("/results", methods=["get", "post"])
-def results():
-    return render_template("results.html", benefits="3000")
