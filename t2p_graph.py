@@ -1,10 +1,9 @@
 """Creación de funciones para graficar el problema de tarifa en dos partes con pygame"""
 import pygame
 from t2p_funciones import *
-from t2p_parametros import *
 
 
-def drawgraph(ta, tb):
+def drawgraph(ta, tb, cmg, proporcion):
     """Creación de gráfico a partir de los parámetros de dos funciones de demanda"""
     pygame.init()
     screen = pygame.display.set_mode([800, 800])
@@ -28,7 +27,7 @@ def drawgraph(ta, tb):
     ##########################################################################
     # Dibujamos las curvas de demanda
 
-    CMG = cmg()
+    CMG = cmg
     # Modificamos las posiciones tal que quede a escala el gráfico
     ta_pos = [[100, 700 - (ta[0] / ta[1])], [100 + ta[0], 700]]
     tb_pos = [[100, 700 - (tb[0] / tb[1])], [100 + tb[0], 700]]
@@ -82,7 +81,7 @@ def drawgraph(ta, tb):
     )
 
     # Precio cliente demanda baja
-    PB = p_b(ta, tb, alpha(), CMG)
+    PB = p_b(ta, tb, proporcion, CMG)
     PB = 700 - (PB / max(max_disp_pagar_A, max_disp_pagar_B)) * 600
     pygame.draw.line(
         screen,
@@ -103,7 +102,7 @@ def drawgraph(ta, tb):
     text_CMg = font.render("Pa = CMg", True, [0, 0, 0])
     text_CMg_y = font.render(str(float(p_a(CMG))), True, [0, 0, 0])
     text_Pb = font.render("Pb", True, [0, 123, 255])
-    text_Pb_y = font.render(str(p_b(ta, tb, alpha(), CMG)), True, [0, 0, 0])
+    text_Pb_y = font.render(str(p_b(ta, tb, proporcion, CMG)), True, [0, 0, 0])
     text_ta_y = font.render(str(max_disp_pagar_A), True, [0, 0, 0])
     text_tb_y = font.render(str(max_disp_pagar_B), True, [0, 0, 0])
     text_ta_x = font.render(str(max_q_A), True, [0, 0, 0])

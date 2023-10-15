@@ -93,4 +93,6 @@ def graphics(parameters):
     T1[1] = float(parameters["slope_1"])
     T2[0] = float(parameters["constant_2"])
     T2[1] = float(parameters["slope_2"])
-    return graph.drawgraph(T1, T2)
+    prop = float(parameters["proporcion"])
+    CMg = float(parameters["costo_marginal"])
+    return graph.drawgraph(T1, T2, CMg, prop)
