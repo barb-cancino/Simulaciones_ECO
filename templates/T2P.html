@@ -87,10 +87,8 @@
 					<div class = "demand-wrapper">
 						<h5 class = "demand-header"> Cantidad demandada </h5>
 						<p class="results-text"> Total: {{data['Q']}} </p>
-						<p class="results-text"> Cliente de demanda alta: </p>
-						<p class="results-text"> {{data['qa']}}</p>
-						<p class="results-text"> Cliente de demanda baja:</p>
-						<p class="results-text"> {{data['qb']}}</p>
+						<p class="results-text"> Cliente de demanda alta: {{data['qa']}} </p>
+						<p class="results-text"> Cliente de demanda baja: {{data['qb']}}</p>
 					</div>
 					<div class = "costs-wrapper">
 						<h5 class = "costs-header"> Costos </h5>
@@ -102,10 +100,8 @@
 					<div class = "benefits-wrapper">
 						<h5 class = "benefits-header"> Beneficios </h5>
 						<p class="results-text"> Totales: $  {{data['beneficios']}}</p>
-						<p class="results-text"> Clientes de demanda alta:</p>
-						<p class="results-text"> $ {{data['beneficios_a']}}</p>
-						<p class="results-text"> Clientes de demanda baja: </p>
-						<p class="results-text"> $ {{data['beneficios_b']}}</p>
+						<p class="results-text"> Clientes de demanda alta: {{data['beneficios_a']}}</p>
+						<p class="results-text"> Clientes de demanda baja: {{data['beneficios_b']}}</p>
 					</div>
 				</div>
 			</div>

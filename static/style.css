@@ -19,6 +19,11 @@ body {
     margin: 0px;
 }
 
+p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 .main-grid {
     display: grid;
     grid-template-columns: 300px 2fr 1fr;
@@ -181,9 +186,9 @@ body {
     background-color: var(--background-accent);
     padding: 25px;
     border-radius: 25px;
-    margin-top: 25px;
+    margin-top: 0;
     margin-left: 80px;
-    margin-right: 50px;
+    margin-right: 35px;
     margin-bottom: 0;
     vertical-align: top;
 }
@@ -191,7 +196,7 @@ body {
 .sub-results-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 190px;
+    grid-template-rows: 210px;
 
 }
 
@@ -200,7 +205,6 @@ body {
     font-family: Roboto;
     font-weight: normal;
     font-size: 14px;
-    line-height: 10px;
 }
 .tariff-wrapper {
     justify-content: left;
@@ -209,7 +213,7 @@ body {
     border-radius: 25px;
     vertical-align: top;
     margin-right: 5px;
-    margin-left: 5px;
+    margin-left: 0;
 }
 
 .tariff-header {
@@ -268,7 +272,7 @@ body {
     padding: 25px;
     border-radius: 25px;
     vertical-align: top;
-    margin-right: 5px;
+    margin-right: 0;
     margin-left: 5px;
 }
 
@@ -329,7 +333,7 @@ body {
     border-radius: 25px;
     margin-top: 15px;
     margin-left: 15px;
-    margin-right: 50px;
+    margin-right: 35px;
     margin-bottom: 15px;
     vertical-align: top;
 }
