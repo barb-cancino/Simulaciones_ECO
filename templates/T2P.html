@@ -36,7 +36,7 @@
 
 					<div class="function-input">
 						<p class="function-text">	qb = </p>
-						<input class= "number-input" id = ""constant_2 ="constant_2" inputmode="numeric" maxlength="4">
+						<input class= "number-input" id = "constant_2" name="constant_2" inputmode="numeric" maxlength="4">
 						<p class="function-text"> + </p>
 						<input class= "number-input" id="slope_2" name = "slope_2" inputmode="numeric" maxlength="3"> 
 						<p class="function-text"> x pb </p>
@@ -49,14 +49,14 @@
 
 					<div class="function-input">
 						<p class="function-text">	Proporción: </p>
-						<input class= "parameter-input" id="proporcion" name="proporcion" type="number" value="0.5" step="0.1" min="0" max="1">
+						<input class= "parameter-input" id="proporcion" name="proporcion" type="number" value="0.5" min="0" max="1">
 					</div>
 
 					<h4 class = "mini-header"> Costos </h4>
 
 					<div class="function-input">
 						<p class="function-text">	Costo Fijo: </p>
-						<input class= "parameter-input" id="costo_fijo" name ="costo_fijo" type="number" value="0" min="0" step="100">
+						<input class= "parameter-input" id="costo_fijo" name ="costo_fijo" type="number" value="0" min="0">
 					</div>
 
 					<div class="function-input">
@@ -82,29 +82,31 @@
 						<p class="results-text"> Cargo Fijo A: ${{data['CFa']}}</p>
 						<p class="results-text"> Precio unitario A: ${{data['Pa']}}</p>
 						<p class="results-text"> Cargo Fijo B: ${{data['CFb']}}</p>
-						<p class="results-text"> Precio unitario B: ${{data['Pa']}}</p>
+						<p class="results-text"> Precio unitario B: ${{data['Pb']}}</p>
 
 					</div>
 					<div class = "demand-wrapper">
 						<h5 class = "demand-header"> Cantidad demandada </h5>
-						<p class="results-text"> Total: </p>
-						<p class="results-text"> Cliente de demanda alta: {{data['qa']}}</p>
-						<p class="results-text"> Cliente de demanda baja: {{data['qb']}}</p>
+						<p class="results-text"> Total: {{data['Q']}} </p>
+						<p class="results-text"> Cliente de demanda alta: </p>
+						<p class="results-text"> {{data['qa']}}</p>
+						<p class="results-text"> Cliente de demanda baja:</p>
+						<p class="results-text"> {{data['qb']}}</p>
 					</div>
 					<div class = "costs-wrapper">
 						<h5 class = "costs-header"> Costos </h5>
-						<p class="results-text"> Totales: $</p>
-						<p class="results-text"> Fijos: $</p>
-						<p class="results-text"> Variables: $</p>
-						<p class="results-text"> Medio: $</p>
+						<p class="results-text"> Totales: $ {{data['CT']}}</p>
+						<p class="results-text"> Fijos: $ {{data['CF']}}</p>
+						<p class="results-text"> Variables: $ {{data['CV']}}</p>
+						<p class="results-text"> Medio: $ {{data['Cme']}}</p>
 					</div>
 					<div class = "benefits-wrapper">
 						<h5 class = "benefits-header"> Beneficios </h5>
 						<p class="results-text"> Totales: $  {{data['beneficios']}}</p>
 						<p class="results-text"> Clientes de demanda alta:</p>
-						<p class="results-text"> $ </p>
+						<p class="results-text"> $ {{data['beneficios_a']}}</p>
 						<p class="results-text"> Clientes de demanda baja: </p>
-						<p class="results-text"> $ </p>
+						<p class="results-text"> $ {{data['beneficios_b']}}</p>
 					</div>
 				</div>
 			</div>
