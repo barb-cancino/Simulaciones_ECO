@@ -305,7 +305,8 @@ p {
 
 .graph {
     display: block;
-    margin: auto
+    margin: auto;
+    width: 350px;
 }
 
 .generate-graph-button {

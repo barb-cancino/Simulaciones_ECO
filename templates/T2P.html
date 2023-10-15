@@ -109,7 +109,11 @@
 
 			<div class = "graph-wrapper">
 				<h3 class = "sub-header"> Gráfico</h3class> 
-				<img src="{{ url_for('static', filename='edit.png') }}" class = 'graph'>
+				{% if data['Pa'] == '0' %}
+					<img src="{{ url_for('static', filename='edit.png') }}" class = 'graph'>
+				{% else %}
+					<img src="{{ url_for('static', filename='grafico_solucion.png') }}" class = 'graph'>
+				{% endif %}
 			</div>
 
 			<div class = restrictions-wrapper>

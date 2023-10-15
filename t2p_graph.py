@@ -146,15 +146,6 @@ def drawgraph(ta, tb):
     screen.blit(text_tb_x, textRect_tb_x)
 
     pygame.display.flip()
-    pygame.image.save(screen, "grafico_solucion.png")
+    pygame.image.save(screen, "static/grafico_solucion.png")
     pygame.quit()
-
-
-def exitbutton():
-    """Boton de cierre de ventana con gráfico"""
-    running = True
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-    pygame.quit()
+    print("Gráfico listo!")
