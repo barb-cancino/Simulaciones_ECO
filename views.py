@@ -5,7 +5,7 @@ views = Blueprint(__name__, "views")
 
 @views.route("/", methods=["get", "post"])
 def t2p():
-    parameters = request.form
+    parameters = request.form.to_dict(flat=True)
     print(parameters)
     return render_template("T2P.html", data=parameters)
 
