@@ -26,12 +26,12 @@ p {
 
 .main-grid {
     display: grid;
-    grid-template-columns: 300px 2fr 1fr;
+    grid-template-columns: 300px 1fr 1fr;
     grid-template-rows: 30px 300px 425px;
 }
 
 .sub-header {
-    display: inline-block;
+    display: block;
     margin-top: 0px;
     margin-bottom: 20px;
     font-family: Roboto;
@@ -294,7 +294,6 @@ p {
 .graph-wrapper {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    justify-content: left;
     background-color: var(--background-accent);
     padding: 25px;
     border-radius: 25px;
@@ -302,7 +301,11 @@ p {
     margin-left: 80px;
     margin-right: 0;
     margin-bottom: 15px;
-    vertical-align: top;
+}
+
+.graph {
+    display: block;
+    margin: auto
 }
 
 .generate-graph-button {
