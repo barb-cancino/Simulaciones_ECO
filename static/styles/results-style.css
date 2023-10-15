@@ -1,0 +1,22 @@
+
+.results-wrapper {
+    grid-row: 2 / 3;
+    grid-column: 2/ 4;
+    justify-content: left;
+    background-color: var(--background-accent);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 25px;
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 0;
+    vertical-align: top;
+}
+
+.results-text {
+    color:var(--secondary-color);
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 15px;
+}
