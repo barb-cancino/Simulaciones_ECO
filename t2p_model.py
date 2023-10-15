@@ -4,26 +4,28 @@ from T2P import t2p_funciones as t2p
 def results(parameters):
     T1 = [0, 0]
     T2 = [0, 0]
+    solution = {
+        "CFa": str(0),
+        "Pa": str(0),
+        "CFb": str(0),
+        "Pb": str(0),
+        "qa": str(0),
+        "qb": str(0),
+        "Q": str(0),
+        "ECa": str(0),
+        "ECb": str(0),
+        "CT": str(0),
+        "CF": str(0),
+        "CV": str(0),
+        "Cme": str(0),
+        "beneficios": str(0),
+        "beneficios_a": str(0),
+        "beneficios_b": str(0),
+    }
     if parameters == 0:
-        return {
-            "CFa": str(0),
-            "Pa": str(0),
-            "CFb": str(0),
-            "Pb": str(0),
-            "qa": str(0),
-            "qb": str(0),
-            "Q": str(0),
-            "ECa": str(0),
-            "ECb": str(0),
-            "CT": str(0),
-            "CF": str(0),
-            "CV": str(0),
-            "Cme": str(0),
-            "beneficios": str(0),
-            "beneficios_a": str(0),
-            "beneficios_b": str(0),
-        }
-
+        return solution
+    elif parameters["constant_1"] == "":
+        return solution
     else:
         T1[0] = float(parameters["constant_1"])
         T1[1] = float(parameters["slope_1"])
