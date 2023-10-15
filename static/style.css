@@ -182,14 +182,17 @@ body {
     padding: 25px;
     border-radius: 25px;
     margin-top: 25px;
-    margin-left: 50px;
+    margin-left: 80px;
     margin-right: 50px;
     margin-bottom: 0;
     vertical-align: top;
 }
 
 .sub-results-wrapper{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 190px;
+
 }
 
 .results-text {
@@ -197,6 +200,7 @@ body {
     font-family: Roboto;
     font-weight: normal;
     font-size: 14px;
+    line-height: 10px;
 }
 .tariff-wrapper {
     justify-content: left;
@@ -204,6 +208,8 @@ body {
     padding: 25px;
     border-radius: 25px;
     vertical-align: top;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .tariff-header {
@@ -222,6 +228,8 @@ body {
     padding: 25px;
     border-radius: 25px;
     vertical-align: top;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .demand-header {
@@ -240,6 +248,8 @@ body {
     padding: 25px;
     border-radius: 25px;
     vertical-align: top;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .costs-header {
@@ -258,6 +268,8 @@ body {
     padding: 25px;
     border-radius: 25px;
     vertical-align: top;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .benefits-header {
@@ -278,7 +290,7 @@ body {
     padding: 25px;
     border-radius: 25px;
     margin-top: 15px;
-    margin-left: 50px;
+    margin-left: 80px;
     margin-right: 0;
     margin-bottom: 15px;
     vertical-align: top;
