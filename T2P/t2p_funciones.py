@@ -46,3 +46,15 @@ def cf_b(tb, pb):
     que soluciona el problema de tarifa en dos partes
     """
     return (((tb[0] / tb[1]) - pb) * q(tb, pb)) / 2
+
+
+def beneficios(N, a, TA, TB, PA, PB, CMG, costo_fijo):
+    Prop = proporcion(a)
+    return (
+        N
+        * (
+            (Prop[0] * (q(TA, PA) * (PA - CMG) + cf_a(TA, TB, PA, PB)))
+            + (Prop[1] * (q(TB, PB) * (PB - CMG) + cf_b(TB, PB)))
+        )
+        - costo_fijo
+    )
