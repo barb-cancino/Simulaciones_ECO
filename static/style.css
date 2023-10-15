@@ -40,6 +40,11 @@ p {
     color: var(--body-color);
 }
 
+.observation {
+    color: var(--secondary-color);
+    font-size: 12px;
+    margin-left: 50px;
+}
 
 .parameters-wrapping {
     position: fixed;
