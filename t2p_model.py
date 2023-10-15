@@ -29,15 +29,15 @@ def results(data):
     beneficios = t2p.beneficios(numero_clientes, proporcion, T1, T2, Pa, Pb, cmg, cf)
 
     solution = {
-        "CFa": CFa,
-        "Pa": Pa,
-        "CFb": CFb,
-        "Pb": Pb,
-        "qa": qa,
-        "qb": qb,
-        "ECa": ECa,
-        "ECb": ECb,
-        "beneficios": beneficios,
+        "CFa": str(CFa),
+        "Pa": str(Pa),
+        "CFb": str(CFb),
+        "Pb": str(Pb),
+        "qa": str(qa),
+        "qb": str(qb),
+        "ECa": str(ECa),
+        "ECb": str(ECb),
+        "beneficios": str(beneficios),
     }
 
     return solution
