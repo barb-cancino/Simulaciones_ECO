@@ -24,7 +24,12 @@ def results(parameters):
     }
     if parameters == 0:
         return solution
-    elif parameters["constant_1"] == "":
+    elif (
+        (parameters["constant_1"] == "")
+        or (parameters["constant_2"] == "")
+        or (parameters["slope_1"] == "")
+        or (parameters["slope_2"] == "")
+    ):
         return solution
     else:
         T1[0] = float(parameters["constant_1"])
