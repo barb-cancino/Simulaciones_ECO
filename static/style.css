@@ -24,16 +24,6 @@ p {
     margin-bottom: 8px;
 }
 
-.main-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-left: 390px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-right: 50px;
-    gap: 15px;
-    
-}
 
 .sub-header {
     display: block;
@@ -80,6 +70,8 @@ p {
     font-size: 10px;
 }
 
+
+
 .side-bar-header {
     display: inline-block;
     background-color: var(--background-accent);
@@ -120,13 +112,23 @@ p {
     background-color: var(--warning);
 }
 
-.mini-header {
+.mini-header-left {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: Roboto;
     font-weight: bold;
     color: var(--primary);
+}
+
+.mini-header-center {
+    display: block;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
 }
 
 
@@ -198,54 +200,12 @@ p {
 /* --------------  Resultados  ----------------- */
 /* --------------------------------------------- */
 
-.results-wrapper {
-    grid-column: span 4;
-    background-color: var(--background-accent);
-    padding: 25px;
-    border-radius: 25px;
-}
 
 .results-text {
     color:var(--secondary-color);
     font-family: Roboto;
     font-weight: normal;
     font-size: 14px;
-}
-.sub-results-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(215px ,1fr));
-    gap: 10px;
-    vertical-align: top;
-}
-
-.sub-results-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(215px,1fr));
-    gap: 10px;
-}
-
-.tariff-wrapper {
-    background-color: var(--primary-soft);
-    padding: 25px;
-    border-radius: 25px;
-}
-
-.demand-wrapper {
-    background-color: var(--info-soft);
-    padding: 25px;
-    border-radius: 25px;
-}
-
-.costs-wrapper {
-    background-color: var(--warning-soft);
-    padding: 25px;
-    border-radius: 25px;
-}
-
-.benefits-wrapper {
-    background-color: var(--succes-soft);
-    padding: 25px;
-    border-radius: 25px;
 }
 
 .tariff-header {
@@ -292,17 +252,11 @@ p {
 /* -----------------  Gráfico  ----------------- */
 /* --------------------------------------------- */
 
-.graph-wrapper {
-    grid-column: span 2;
-    background-color: var(--background-accent);
-    padding: 25px;
-    border-radius: 25px;
-}
 
 .graph {
     display: block;
     margin: auto;
-    width: 100%;
+    width:minmax(50%,325px);
 }
 
 .generate-graph-button {
@@ -333,10 +287,11 @@ p {
 /* -------------  Restricciones  --------------- */
 /* --------------------------------------------- */
 
-.restrictions-wrapper {
-    grid-column: span 2;
-    justify-content: left;
-    background-color: var(--background-accent);
-    padding: 25px;
-    border-radius: 25px;
+.restrictions {
+    display: block;
+    color:var(--secondary-color);
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
 }
