@@ -33,14 +33,14 @@
     font-family: Roboto;
     font-weight: bold;
     font-size: 18px;
-    color: var(--body-color);
+    color: var(--text-dark);
 
 }
 
 .clear-button {
     display: inline-block;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
+    color: var(--text-medium-color);
+    border: 1px solid var(--text-medium-color);
     background-color: white;
     padding-left: 8px;
     padding-right: 8px;
@@ -91,7 +91,7 @@
 .number-input {
     width: 3em;
     border: 1px solid;
-    border-color: var(--secondary-color);
+    border-color: var(--text-medium-color);
     border-radius: 10px;
     margin-left: 5px;
     text-align: center;

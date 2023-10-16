@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+		<title>Soluciones-eco</title>
+		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+		<link rel="stylesheet" href="{{url_for('static', filename='grid-style.css')}}">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Oswald:wght@700&family=Roboto+Mono:wght@500;600&family=Roboto:wght@400;500&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}">
+		<link rel="manifest" href="/site.webmanifest">
+  </head>
+
+  <body>
+
+		<nav class = "parameters-wrapping">
+			<ul class = "parameters-list">
+
+				<li class = "parameters-item">
+					<h1 class="main-header" >Tarifa en dos partes </h1>
+				</li>
+
+				<li class = "parameters-item">
+					<div class = "subsection-heading">
+						<h3 class = "side-bar-header">	Parámetros </h3>
+						<button class = "clear-button" onclick="location.href = '/'" type="button"> reset</button>
+					</div>
+				</li>
+
+				<li class = "parameters-item">
+					<form method= "post">
+						<h4 class = "mini-header-left"> Demanda </h4>
+
+						<div class="function-input">
+							<p class="function-text">	qa = </p>
+							<input class= "number-input" id="constant_1" name ="constant_1" inputmode="numeric" maxlength="4">
+							<p class="function-text"> - </p>
+							<input class= "number-input" id = "slope_1" name = "slope_1" inputmode="numeric" maxlength="3"> 
+							<p class="function-text"> x pa </p>
+						</div>
+
+						<div class="function-input">
+							<p class="function-text">	qb = </p>
+							<input class= "number-input" id = "constant_2" name="constant_2" inputmode="numeric" maxlength="4">
+							<p class="function-text"> - </p>
+							<input class= "number-input" id="slope_2" name = "slope_2" inputmode="numeric" maxlength="3"> 
+							<p class="function-text"> x pb </p>
+						</div>
+
+						<div class="function-input">
+							<p class="function-text">	N° Clientes: </p>
+							<input class= "parameter-input" id="numero_clientes" name = "numero_clientes" type="number" value="2" min = "2" >
+						</div>
+
+						<div class="function-input">
+							<p class="function-text">	Proporción: </p>
+							<input class= "parameter-input" id="proporcion" name="proporcion" type="number" value="0.5" min="0" max="1" step="0.1">
+						</div>
+						<p class="observation"> &#8727; de clientes de demanda alta. </p>
+
+						<h4 class = "mini-header-left"> Costos </h4>
+
+						<div class="function-input">
+							<p class="function-text">	Costo Fijo: </p>
+							<input class= "parameter-input" id="costo_fijo" name ="costo_fijo" type="number" value="0" min="0">
+						</div>
+
+						<div class="function-input">
+							<p class="function-text">	Costo Marginal: </p>
+							<input class= "parameter-input" id ="costo_marginal" name= "costo_marginal" type="number" value="1" min="0">
+						</div>
+						</br>
+
+					</form>
+				</li>
+
+				<li class = "parameters-item">
+					<input type="submit" class="generate-results-button" value="Solución">
+				</li>
+			</ul>
+		</nav>
+
+		<div class="main-grid">
+			<div class = "results-wrapper">
+				<h3 class = "sub-header"> Resultados</h3>
+				<div class = "sub-results-grid">
+					<div class = sub-results-wrapper>
+						<div class = "tariff-wrapper">
+							<h5 class = "tariff-header"> Tarifa </h5>
+							<p class="results-text"> Cargo Fijo A: $ {{data['CFa']}}</p>
+							<p class="results-text"> Precio unitario A: $ {{data['Pa']}}</p>
+							<p class="results-text"> Cargo Fijo B: ${{data['CFb']}}</p>
+							<p class="results-text"> Precio unitario B: ${{data['Pb']}}</p>
+
+						</div>
+						<div class = "demand-wrapper">
+							<h5 class = "demand-header"> Cantidad demandada </h5>
+							<p class="results-text"> Total: {{data['Q']}} </p>
+							<p class="results-text"> Cliente de demanda alta: {{data['qa']}} </p>
+							<p class="results-text"> Cliente de demanda baja: {{data['qb']}}</p>
+						</div>
+					</div>
+					<div class = sub-results-wrapper>
+						<div class = "costs-wrapper">
+							<h5 class = "costs-header"> Costos </h5>
+							<p class="results-text"> Totales: $ {{data['CT']}}</p>
+							<p class="results-text"> Fijos: $ {{data['CF']}}</p>
+							<p class="results-text"> Variables: $ {{data['CV']}}</p>
+							<p class="results-text"> Medio: $ {{data['Cme']}}</p>
+						</div>
+						<div class = "benefits-wrapper">
+							<h5 class = "benefits-header"> Beneficios </h5>
+							<p class="results-text"> Totales: $  {{data['beneficios']}}</p>
+							<p class="results-text"> Clientes de demanda alta: {{data['beneficios_a']}}</p>
+							<p class="results-text"> Clientes de demanda baja: {{data['beneficios_b']}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class = "graph-wrapper">
+				<h3 class = "sub-header"> Gráfico </h3> 
+
+			{% if data['Pa'] == '0' %}
+				<img src="{{ url_for('static', filename='edit.png') }}" class = 'graph'>
+			{% else %}
+				<img src="{{ url_for('static', filename='grafico_solucion.png') }}" class = 'graph'>
+			{% endif %}
+			</div>
+			<div class = restrictions-wrapper>
+				<h3 class = "sub-header"> Restricciones</h3class>
+				<h4 class = "mini-header-center">	Excedentes del consumidor</h4>
+				<p class = "restrictions"> ECa(pa) = {{data['ECa']}}</p>
+				<p class = "restrictions"> ECb(pb) = {{data['ECb']}}</p>
+				<h4 class = "mini-header-center">	Restricción de participación</h4>
+				{% if data['RPa']%}
+					<p class = "text-warning"> ECa(pa) - CFa &#8805; 0 </p>
+				{% else %}
+					<p class = "restrictions"> ECa(pa) - CFa &#8805; 0 </p>
+				{% endif %}
+				{% if data['RPb']%}
+					<p class = "text-warning"> ECb(pb) - CFb &#8805; 0 </p>
+				{% else %}
+					<p class = "restrictions"> ECb(pb) - CFb &#8805; 0 </p>
+				{% endif %}
+				<h4 class = "mini-header-center">	Restricción de compatibilidad de incentivos</h4>
+				{% if data['RCIa'] %}
+					<p class = "text-warning"> ECa(pa) - CFa &#8805; ECa(pb) - CFb </p>
+				{% else %}
+					<p class = "restrictions"> ECa(pa) - CFa &#8805; ECa(pb) - CFb </p>
+				{% endif %}
+				{% if data['RCIb'] %}
+					<p class = "text-warning"> ECb(pb) - CFb &#8805; ECb(pa) - CFa </p>
+				{% else %}
+					<p class = "restrictions"> ECb(pb) - CFb &#8805; ECb(pa) - CFa </p>
+				{% endif %}
+			</div>
+		</div>
+
+  </body>
+
+</html>
