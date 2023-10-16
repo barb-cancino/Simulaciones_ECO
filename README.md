@@ -2,7 +2,9 @@
 
 Código para analizar resultados de problemas económicos
 
-[Link a web app](https://barb-cancino.github.io/Simulaciones_ECO/)
+[Link static web](https://barb-cancino.github.io/Simulaciones_ECO/)
+
+[Link app](https://soluciones-eco.onrender.com)
 
 ### T2P
 Características:
