@@ -1,7 +1,7 @@
 
-body {
-    --body-color:rgb(20, 24, 36);
-    --secondary-color:rgb(151, 151, 151);
+:root {
+    --text-dark:rgb(20, 24, 36);
+    --text-medium-color:rgb(151, 151, 151);
     --primary:rgb(0, 130, 252);
     --primary-soft:rgb(229, 243, 255);
     --succes: rgb(113, 194, 25);
@@ -14,8 +14,8 @@ body {
     --background-accent: white;
 
     background-color: var(--background-color);
-    color: var(--body-color);
-
+    color: var(--text-dark);
+    font-size: 16px;
     margin: 0px;
 }
 
@@ -24,21 +24,34 @@ p {
     margin-bottom: 8px;
 }
 
+.main-header {
+    background-color: var(--background-accent);
+    margin-top: 0px;
+    border-bottom: 1px solid var(--background-color);
+    padding-left: 0;
+    padding-right: 10px;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
 
 .sub-header {
     display: block;
     margin-top: 0px;
     margin-bottom: 20px;
     font-family: Roboto;
-    font-weight: bold;
+    font-weight: 500;
     font-size: 18px;
-    color: var(--body-color);
+    color: var(--text-medium-color);
 }
 
 .observation {
-    color: var(--secondary-color);
-    font-size: 12px;
-    margin-left: 50px;
+    color: var(--text-medium-color);
+    font-size: 0.65rem;
+    margin-left: 1rem;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* --------------------------------------------- */
@@ -46,59 +59,62 @@ p {
 /* --------------------------------------------- */
 
 .parameters-wrapping {
+    height: 100vh;
+    width: 17.5rem;
     position: fixed;
-    top:0;
-    bottom: 0;
     background-color: var(--background-accent);
     padding-top: 25px;
-    padding-right: 40px;
-    padding-bottom: 25px;
-    padding-left: 50px;
+    padding-left: 2rem;
+    top: 0;
     margin-top: 0;
 }
 
-.main-header {
-    background-color: var(--background-accent);
-    margin-top: 0px;
-    border-bottom: 1px solid var(--background-color);
-    padding-left: 0;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-bottom: 75px;
-    font-family: 'Kanit', sans-serif;
-    font-size: 10px;
+.parameters-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parameters-item {
+width: 100%;
 }
 
 
+.subsection-heading {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
 .side-bar-header {
-    display: inline-block;
     background-color: var(--background-accent);
     margin-top: 0px;
     padding-left: 0px;
     margin-bottom: 20px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 18px;
-    color: var(--body-color);
+    font-family:Roboto;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--text-dark);
 
 }
 
 .clear-button {
-    display: inline-block;
-    color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
+    color: var(--text-medium-color);
+    border: 1px solid var(--text-medium-color);
     background-color: white;
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 2px;
-    padding-bottom: 2px;
+    padding-bottom: 3px;
     border-radius: 15px;
     cursor:pointer;
-    margin-left: 75px;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: 2rem;
     transition: color border background-color 0.15s;
+    height: 24px;
 }
 
 .clear-button:hover {
@@ -117,16 +133,16 @@ p {
     margin-top: 20px;
     margin-bottom: 20px;
     font-family: Roboto;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--primary);
 }
 
 .mini-header-center {
     display: block;
-    margin-top: 35px;
+    margin-top: 4rem;
     margin-bottom: 20px;
     font-family: Roboto;
-    font-weight: bold;
+    font-weight: 500;
     color: var(--primary);
     text-align: center;
 }
@@ -149,7 +165,7 @@ p {
 .number-input {
     width: 3em;
     border: 1px solid;
-    border-color: var(--secondary-color);
+    border-color: var(--text-medium-color);
     border-radius: 10px;
     margin-left: 5px;
     text-align: center;
@@ -158,34 +174,31 @@ p {
 .parameter-input {
     width: 8em;
     border: 1px solid;
-    border-color: var(--secondary-color);
+    border-color: var(--text-medium-color);
     border-radius: 10px;
     margin-left: 5px;
     text-align: center;
 }
 
-.botton-holder {
-    display: flex;
-    justify-content: end;
-}
 
 .generate-results-button {
-    display: inline-block;
+    display: block;
     color: white;
     background-color: var(--primary);
-    font-weight: bold;
-    font-family: Roboto;
-    font-size: 12px;
+    font-family:Roboto;
+    font-weight: 500;
+    font-size: 0.85rem;
     border: none;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 12px;
     padding-bottom: 12px;
     border-radius: 25px;
+    margin-left: auto;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    cursor:pointer;    
     transition: opacity 0.15s;
-    cursor:pointer;
-    margin-top: 35px;
-    margin-left: 15px;
 }
 
 .generate-results-button:hover {
@@ -202,7 +215,7 @@ p {
 
 
 .results-text {
-    color:var(--secondary-color);
+    color:var(--text-medium-color);
     font-family: Roboto;
     font-weight: normal;
     font-size: 14px;
@@ -211,20 +224,18 @@ p {
 .tariff-header {
     display: block;
     margin-top: 0px;
-    margin-bottom: 20px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 15px;
+    margin-bottom: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
     color: var(--primary);
 }
 
 .demand-header {
     display: block;
     margin-top: 0px;
-    margin-bottom: 20px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 15px;
+    margin-bottom: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
     color: var(--info);
 }
 
@@ -232,9 +243,8 @@ p {
     display: block;
     margin-top: 0px;
     margin-bottom: 20px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
     color: var(--warning);
 }
 
@@ -242,9 +252,8 @@ p {
     display: block;
     margin-top: 0px;
     margin-bottom: 20px;
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
     color: var(--succes);
 }
 
@@ -259,21 +268,6 @@ p {
     width:100%;
 }
 
-.generate-graph-button {
-    color: white;
-    background-color: var(--primary);
-    font-weight: bold;
-    border: none;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 25px;
-    transition: opacity 0.15s;
-    cursor:pointer;
-    margin-left: 25px;
-    margin-right: 25px;
-}
 
 .generate-graph-button:hover {
     opacity: 0.8;
@@ -289,10 +283,9 @@ p {
 
 .restrictions {
     display: block;
-    color:var(--secondary-color);
+    color:var(--text-medium-color);
     font-family: Roboto;
-    font-weight: bold;
-    font-size: 15px;
+    font-weight: 500;
     text-align: center;
 }
 
@@ -300,8 +293,7 @@ p {
     display: block;
     color:var(--warning);
     font-family: Roboto;
-    font-weight: bold;
-    font-size: 15px;
+    font-weight: 500;
     text-align: center;
 
 }

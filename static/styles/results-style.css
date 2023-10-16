@@ -15,7 +15,7 @@
 }
 
 .results-text {
-    color:var(--secondary-color);
+    color:var(--text-medium-color);
     font-family: Roboto;
     font-weight: normal;
     font-size: 15px;
