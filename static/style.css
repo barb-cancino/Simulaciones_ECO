@@ -46,6 +46,10 @@ p {
     margin-left: 50px;
 }
 
+/* --------------------------------------------- */
+/* -------- Side-bar (Parámetros)  ------------- */
+/* --------------------------------------------- */
+
 .parameters-wrapping {
     position: fixed;
     top:0;
@@ -157,6 +161,7 @@ p {
     display: flex;
     justify-content: end;
 }
+
 .generate-results-button {
     display: inline-block;
     color: white;
@@ -183,6 +188,10 @@ p {
 .generate-results-button:active {
     opacity: 0.5;
 }
+
+/* --------------------------------------------- */
+/* --------------  Resultados  ----------------- */
+/* --------------------------------------------- */
 
 .results-wrapper {
     grid-row: 2 / 3;
@@ -291,6 +300,10 @@ p {
     color: var(--succes);
 }
 
+/* --------------------------------------------- */
+/* -----------------  Gráfico  ----------------- */
+/* --------------------------------------------- */
+
 .graph-wrapper {
     grid-row: 3 / 4;
     grid-column: 2 / 3;
@@ -332,6 +345,10 @@ p {
 .generate-graph-button:active {
     opacity: 0.5;
 }
+
+/* --------------------------------------------- */
+/* -------------  Restricciones  --------------- */
+/* --------------------------------------------- */
 
 .restrictions-wrapper {
     grid-row: 3 / 4;
