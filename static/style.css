@@ -13,9 +13,9 @@ body {
     --background-color: rgb(248, 248, 248);
     --background-accent: white;
 
-
     background-color: var(--background-color);
     color: var(--body-color);
+
     margin: 0px;
 }
 
@@ -26,8 +26,13 @@ p {
 
 .main-grid {
     display: grid;
-    grid-template-columns: 300px 1fr 1fr;
-    grid-template-rows: 30px 300px 425px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 390px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 50px;
+    gap: 15px;
+    
 }
 
 .sub-header {
@@ -194,24 +199,10 @@ p {
 /* --------------------------------------------- */
 
 .results-wrapper {
-    grid-row: 2 / 3;
-    grid-column: 2/ 4;
-    justify-content: left;
+    grid-column: span 4;
     background-color: var(--background-accent);
     padding: 25px;
     border-radius: 25px;
-    margin-top: 0;
-    margin-left: 80px;
-    margin-right: 35px;
-    margin-bottom: 0;
-    vertical-align: top;
-}
-
-.sub-results-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 210px;
-
 }
 
 .results-text {
@@ -220,14 +211,41 @@ p {
     font-weight: normal;
     font-size: 14px;
 }
+.sub-results-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(215px ,1fr));
+    gap: 10px;
+    vertical-align: top;
+}
+
+.sub-results-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(215px,1fr));
+    gap: 10px;
+}
+
 .tariff-wrapper {
-    justify-content: left;
     background-color: var(--primary-soft);
     padding: 25px;
     border-radius: 25px;
-    vertical-align: top;
-    margin-right: 5px;
-    margin-left: 0;
+}
+
+.demand-wrapper {
+    background-color: var(--info-soft);
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.costs-wrapper {
+    background-color: var(--warning-soft);
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.benefits-wrapper {
+    background-color: var(--succes-soft);
+    padding: 25px;
+    border-radius: 25px;
 }
 
 .tariff-header {
@@ -240,16 +258,6 @@ p {
     color: var(--primary);
 }
 
-.demand-wrapper {
-    justify-content: left;
-    background-color: var(--info-soft);
-    padding: 25px;
-    border-radius: 25px;
-    vertical-align: top;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
 .demand-header {
     display: block;
     margin-top: 0px;
@@ -260,16 +268,6 @@ p {
     color: var(--info);
 }
 
-.costs-wrapper {
-    justify-content: left;
-    background-color: var(--warning-soft);
-    padding: 25px;
-    border-radius: 25px;
-    vertical-align: top;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
 .costs-header {
     display: block;
     margin-top: 0px;
@@ -278,16 +276,6 @@ p {
     font-weight: bold;
     font-size: 15px;
     color: var(--warning);
-}
-
-.benefits-wrapper {
-    justify-content: left;
-    background-color: var(--succes-soft);
-    padding: 25px;
-    border-radius: 25px;
-    vertical-align: top;
-    margin-right: 0;
-    margin-left: 5px;
 }
 
 .benefits-header {
@@ -305,15 +293,10 @@ p {
 /* --------------------------------------------- */
 
 .graph-wrapper {
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
+    grid-column: span 2;
     background-color: var(--background-accent);
     padding: 25px;
     border-radius: 25px;
-    margin-top: 15px;
-    margin-left: 80px;
-    margin-right: 0;
-    margin-bottom: 15px;
 }
 
 .graph {
@@ -351,15 +334,9 @@ p {
 /* --------------------------------------------- */
 
 .restrictions-wrapper {
-    grid-row: 3 / 4;
-    grid-column: 3 / 4;
+    grid-column: span 2;
     justify-content: left;
     background-color: var(--background-accent);
     padding: 25px;
     border-radius: 25px;
-    margin-top: 15px;
-    margin-left: 15px;
-    margin-right: 35px;
-    margin-bottom: 15px;
-    vertical-align: top;
 }

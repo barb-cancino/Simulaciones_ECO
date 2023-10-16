@@ -6,6 +6,7 @@
 		<title>Soluciones-eco</title>
 		<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -76,33 +77,37 @@
 		<div class="main-grid">
 			<div class = "results-wrapper">
 				<h3 class = "sub-header"> Resultados</h3>
-				<div class = "sub-results-wrapper">
-					<div class = "tariff-wrapper">
-						<h5 class = "tariff-header"> Tarifa </h5>
-						<p class="results-text"> Cargo Fijo A: ${{data['CFa']}}</p>
-						<p class="results-text"> Precio unitario A: ${{data['Pa']}}</p>
-						<p class="results-text"> Cargo Fijo B: ${{data['CFb']}}</p>
-						<p class="results-text"> Precio unitario B: ${{data['Pb']}}</p>
+				<div class = "sub-results-grid">
+					<div class = sub-results-wrapper>
+						<div class = "tariff-wrapper">
+							<h5 class = "tariff-header"> Tarifa </h5>
+							<p class="results-text"> Cargo Fijo A: ${{data['CFa']}}</p>
+							<p class="results-text"> Precio unitario A: ${{data['Pa']}}</p>
+							<p class="results-text"> Cargo Fijo B: ${{data['CFb']}}</p>
+							<p class="results-text"> Precio unitario B: ${{data['Pb']}}</p>
 
+						</div>
+						<div class = "demand-wrapper">
+							<h5 class = "demand-header"> Cantidad demandada </h5>
+							<p class="results-text"> Total: {{data['Q']}} </p>
+							<p class="results-text"> Cliente de demanda alta: {{data['qa']}} </p>
+							<p class="results-text"> Cliente de demanda baja: {{data['qb']}}</p>
+						</div>
 					</div>
-					<div class = "demand-wrapper">
-						<h5 class = "demand-header"> Cantidad demandada </h5>
-						<p class="results-text"> Total: {{data['Q']}} </p>
-						<p class="results-text"> Cliente de demanda alta: {{data['qa']}} </p>
-						<p class="results-text"> Cliente de demanda baja: {{data['qb']}}</p>
-					</div>
-					<div class = "costs-wrapper">
-						<h5 class = "costs-header"> Costos </h5>
-						<p class="results-text"> Totales: $ {{data['CT']}}</p>
-						<p class="results-text"> Fijos: $ {{data['CF']}}</p>
-						<p class="results-text"> Variables: $ {{data['CV']}}</p>
-						<p class="results-text"> Medio: $ {{data['Cme']}}</p>
-					</div>
-					<div class = "benefits-wrapper">
-						<h5 class = "benefits-header"> Beneficios </h5>
-						<p class="results-text"> Totales: $  {{data['beneficios']}}</p>
-						<p class="results-text"> Clientes de demanda alta: {{data['beneficios_a']}}</p>
-						<p class="results-text"> Clientes de demanda baja: {{data['beneficios_b']}}</p>
+					<div class = sub-results-wrapper>
+						<div class = "costs-wrapper">
+							<h5 class = "costs-header"> Costos </h5>
+							<p class="results-text"> Totales: $ {{data['CT']}}</p>
+							<p class="results-text"> Fijos: $ {{data['CF']}}</p>
+							<p class="results-text"> Variables: $ {{data['CV']}}</p>
+							<p class="results-text"> Medio: $ {{data['Cme']}}</p>
+						</div>
+						<div class = "benefits-wrapper">
+							<h5 class = "benefits-header"> Beneficios </h5>
+							<p class="results-text"> Totales: $  {{data['beneficios']}}</p>
+							<p class="results-text"> Clientes de demanda alta: {{data['beneficios_a']}}</p>
+							<p class="results-text"> Clientes de demanda baja: {{data['beneficios_b']}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
