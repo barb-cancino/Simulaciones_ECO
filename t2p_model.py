@@ -22,6 +22,10 @@ def results(parameters):
         "beneficios": str(0),
         "beneficios_a": str(0),
         "beneficios_b": str(0),
+        "RPa": False,
+        "RPb": False,
+        "RCIa": False,
+        "RCIb": False,
     }
     if parameters == 0:
         return solution
@@ -65,6 +69,30 @@ def results(parameters):
         beneficios_a = (qa * (Pa - cmg) + CFa) * proporcion * numero_clientes
         beneficios_b = (qb * (Pb - cmg) + CFb) * (1 - proporcion) * numero_clientes
 
+        # Restricción de participación
+
+        if ECa < CFa:
+            RPa = True
+        else:
+            RPa = False
+
+        if ECb < CFb:
+            RPb = True
+        else:
+            RPb = False
+
+        # Restricción de compatibilidad de incentivos
+
+        if (ECa - CFa) < (t2p.ec(T1, Pb) - CFb):
+            RCIa = True
+        else:
+            RCIa = False
+
+        if (ECb - CFb) < (t2p.ec(T2, Pa) - CFa):
+            RCIb = True
+        else:
+            RCIb = False
+
         solution = {
             "CFa": str(CFa),
             "Pa": str(Pa),
@@ -82,6 +110,10 @@ def results(parameters):
             "beneficios": str(beneficios),
             "beneficios_a": str(beneficios_a),
             "beneficios_b": str(beneficios_b),
+            "RPa": RPa,
+            "RPb": RPb,
+            "RCIa": RCIa,
+            "RCIb": RCIb,
         }
         return solution
 

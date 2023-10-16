@@ -82,8 +82,8 @@
 					<div class = sub-results-wrapper>
 						<div class = "tariff-wrapper">
 							<h5 class = "tariff-header"> Tarifa </h5>
-							<p class="results-text"> Cargo Fijo A: ${{data['CFa']}}</p>
-							<p class="results-text"> Precio unitario A: ${{data['Pa']}}</p>
+							<p class="results-text"> Cargo Fijo A: $ {{data['CFa']}}</p>
+							<p class="results-text"> Precio unitario A: $ {{data['Pa']}}</p>
 							<p class="results-text"> Cargo Fijo B: ${{data['CFb']}}</p>
 							<p class="results-text"> Precio unitario B: ${{data['Pb']}}</p>
 
@@ -126,11 +126,27 @@
 				<p class = "restrictions"> ECa(pa) = {{data['ECa']}}</p>
 				<p class = "restrictions"> ECb(pb) = {{data['ECb']}}</p>
 				<h4 class = "mini-header-center">	Restricción de participación</h4>
-				<p class = "restrictions"> ECa(pa) - CFa &#8805; 0 </p>
-				<p class = "restrictions"> ECb(pb) - CFb &#8805; 0 </p>
+				{% if data['RPa']%}
+					<p class = "text-warning"> ECa(pa) - CFa &#8805; 0 </p>
+				{% else %}
+					<p class = "restrictions"> ECa(pa) - CFa &#8805; 0 </p>
+				{% endif %}
+				{% if data['RPb']%}
+					<p class = "text-warning"> ECb(pb) - CFb &#8805; 0 </p>
+				{% else %}
+					<p class = "restrictions"> ECb(pb) - CFb &#8805; 0 </p>
+				{% endif %}
 				<h4 class = "mini-header-center">	Restricción de compatibilidad de incentivos</h4>
-				<p class = "restrictions"> ECa(pa) - CFa &#8805; ECa(pb) - CFb </p>
-				<p class = "restrictions"> ECb(pb) - CFb &#8805; ECb(pa) - CFa </p>
+				{% if data['RCIa'] %}
+					<p class = "text-warning"> ECa(pa) - CFa &#8805; ECa(pb) - CFb </p>
+				{% else %}
+					<p class = "restrictions"> ECa(pa) - CFa &#8805; ECa(pb) - CFb </p>
+				{% endif %}
+				{% if data['RCIb'] %}
+					<p class = "text-warning"> ECb(pb) - CFb &#8805; ECb(pa) - CFa </p>
+				{% else %}
+					<p class = "restrictions"> ECb(pb) - CFb &#8805; ECb(pa) - CFa </p>
+				{% endif %}
 			</div>
 		</div>
 
