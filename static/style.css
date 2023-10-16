@@ -302,7 +302,7 @@ p {
 .graph {
     display: block;
     margin: auto;
-    width: 350px;
+    width: 100%;
 }
 
 .generate-graph-button {
