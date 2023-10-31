@@ -1,9 +1,9 @@
-import * as t2p from "./t2p_functions.js"
+const t2p = require("./t2p_functions.js");
 
 D1 = [0, 0]
 D2 = [0, 0]
 
-function t2pSolucion(parametros) {
+module.export.t2pSolucion = (parametros) => {
     let solucion = {
         cargoFijoA : 0,
         precioA : 0,
